@@ -29,13 +29,15 @@ SOURCES += \
         mainwindow.cpp \
     sqlConnector/sqlconnector.cpp \
     entity/person.cpp \
-    model/personsmodel.cpp
+    model/personsmodel.cpp \
+    entity/account.cpp
 
 HEADERS += \
         mainwindow.h \
     sqlConnector/sqlconnector.h \
     entity/person.h \
-    model/personsmodel.h
+    model/personsmodel.h \
+    entity/account.h
 
 FORMS += \
         mainwindow.ui

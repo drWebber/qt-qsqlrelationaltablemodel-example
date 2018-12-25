@@ -11,7 +11,7 @@ public:
     PersonsModel(QObject *parent = nullptr);
 
     enum Column {
-        ID, NAME, EMAIL, STATUS
+        ID, NAME, EMAIL, STATUS, ACCOUNT_ID
     };
 
     Person personAt(const QModelIndex &index) const;

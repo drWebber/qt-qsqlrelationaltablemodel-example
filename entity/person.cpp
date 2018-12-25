@@ -15,57 +15,74 @@ QString Person::keyToStatus(const Person::Status &key)
     return statuses.value(key);
 }
 
-int Person::getId() const
-{
-    return id;
-}
-
 Person Person::setId(int value)
 {
-    id = value;
+    _id = value;
     return *this;
-}
-
-QString Person::getName() const
-{
-    return name;
 }
 
 Person Person::setName(const QString &value)
 {
-    name = value;
+    _name = value;
     return *this;
-}
-
-QString Person::getEmail() const
-{
-    return email;
 }
 
 Person Person::setEmail(const QString &value)
 {
-    email = value;
+    _email = value;
     return *this;
-}
-
-Person::Status Person::getStatus() const
-{
-    return status;
 }
 
 QString Person::stringifiedStatus() const
 {
-    return keyToStatus(status);
+    return keyToStatus(_status);
 }
 
 Person Person::setStatus(const Person::Status &value)
 {
-    status = value;
+    _status = value;
     return *this;
 }
 
 Person Person::setStatus(const QString &value)
 {
-    status = statusToKey(value);
+    _status = statusToKey(value);
+    return *this;
+}
+
+Person &Person::setAccountId(int accountId)
+{
+    _accoun = Account(accountId);
+    return *this;
+}
+
+int Person::id() const
+{
+    return _id;
+}
+
+QString Person::name() const
+{
+    return _name;
+}
+
+QString Person::email() const
+{
+    return _email;
+}
+
+Person::Status Person::status() const
+{
+    return _status;
+}
+
+Account Person::accoun() const
+{
+    return _accoun;
+}
+
+Person Person::setAccoun(const Account &accoun)
+{
+    _accoun = accoun;
     return *this;
 }

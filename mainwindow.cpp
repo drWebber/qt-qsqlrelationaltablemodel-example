@@ -39,9 +39,11 @@ void MainWindow::on_changePerson_clicked()
 void MainWindow::on_create_clicked()
 {
     QString name = ui->name->text();
-    Person person = Person().setName(name)
+    Person person = Person()
+            .setName(name)
             .setEmail(name.toLower() + "@gmail.com")
-            .setStatus(Person::UNEMPLOYED);
+            .setStatus(Person::UNEMPLOYED)
+            .setAccountId(1);
     personsModel->create(person);
 }
 
